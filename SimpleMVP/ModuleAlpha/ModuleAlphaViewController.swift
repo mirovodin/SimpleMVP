@@ -36,7 +36,7 @@ final class ModuleAlphaViewController: UIViewController {
     override func viewDidLoad() {
         title = presenter.title
         presenter.viewDidAppear()
-    }
+    }    
 }
 
 extension ModuleAlphaViewController: ModuleAlphaViewProtocol {

@@ -38,6 +38,10 @@ final class ModuleBetaViewController: UIViewController {
         title = presenter.title
         presenter.viewDidAppear()
     }
+    
+    deinit {
+        print(">>> ModuleBetaViewController is deinit")
+    }
 }
 
 extension ModuleBetaViewController: ModuleBetaViewProtocol {

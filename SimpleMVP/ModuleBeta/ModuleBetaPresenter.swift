@@ -36,6 +36,10 @@ final class ModuleBetaPresenter: ModuleBetaPresenterProtocol {
         self.someParam = someParam
     }
     
+    deinit {
+        print(">>> ModuleBetaPresenter is deinit")
+    }
+    
     func viewDidAppear() {
         let model = ModuleBetaView.Model(
             text: someParam
