@@ -8,7 +8,7 @@ protocol ModuleAlphaPresenterProtocol {
     var title: String { get }
     var analiticScreenName: String { get }
     
-    func viewDidAppear()
+    func viewDidLoad()
     func tapButton()
 }
 
@@ -31,7 +31,7 @@ final class ModuleAlphaPresenter: ModuleAlphaPresenterProtocol {
         self.router = router
     }
     
-    func viewDidAppear() {
+    func viewDidLoad() {
         view?.stopLoader()
         service.requestData { [weak self] (result: Result<String, Error>) in
             guard let self else { return }

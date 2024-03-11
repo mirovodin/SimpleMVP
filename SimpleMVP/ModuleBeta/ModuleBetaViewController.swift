@@ -36,7 +36,7 @@ final class ModuleBetaViewController: UIViewController {
 
     override func viewDidLoad() {
         title = presenter.title
-        presenter.viewDidAppear()
+        presenter.viewDidLoad()
     }
     
     deinit {

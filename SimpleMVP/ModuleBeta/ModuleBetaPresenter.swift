@@ -9,7 +9,7 @@ import Foundation
 protocol ModuleBetaPresenterProtocol {
     var title: String { get }
     
-    func viewDidAppear()
+    func viewDidLoad()
     func requestSave()
 }
 
@@ -40,7 +40,7 @@ final class ModuleBetaPresenter: ModuleBetaPresenterProtocol {
         print(">>> ModuleBetaPresenter is deinit")
     }
     
-    func viewDidAppear() {
+    func viewDidLoad() {
         let model = ModuleBetaView.Model(
             text: someParam
         )
