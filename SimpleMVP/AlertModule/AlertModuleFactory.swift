@@ -18,7 +18,8 @@ final class AlertModuleFactory {
         
         let action = UIAlertAction(
             title: "Ok",
-            style: .default, handler: nil
+            style: .default,
+            handler: nil
         )
         
         alertViewController.addAction(action)
