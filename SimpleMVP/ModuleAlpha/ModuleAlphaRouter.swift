@@ -10,9 +10,6 @@ import UIKit
 // Роутер, который открывает все переходы с модуля Alpha
 protocol ModuleAlphaRouterProtocol: AnyObject {
     
-    // Устанавливаем основной UIViewController
-    func setRootViewController(root: UIViewController)
-    
     // Модуль Alpha показывает модуль Beta и передает в него параметры.
     func openModuleBeta(with param: String)
 }

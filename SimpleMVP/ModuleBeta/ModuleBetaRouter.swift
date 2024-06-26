@@ -7,10 +7,6 @@
 import UIKit
 
 protocol ModuleBetaRouterProtocol {
-    
-    // Устанавливаем основной UIViewController
-    func setRootViewController(root: UIViewController)
-    
     func showSuccess()
     func showError()
 }
