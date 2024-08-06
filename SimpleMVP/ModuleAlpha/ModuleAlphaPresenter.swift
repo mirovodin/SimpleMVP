@@ -32,7 +32,7 @@ final class ModuleAlphaPresenter: ModuleAlphaPresenterProtocol {
     }
     
     func viewDidLoad() {
-        view?.stopLoader()
+        view?.startLoader()
         service.requestData { [weak self] (result: Result<String, Error>) in
             guard let self else { return }
             view?.stopLoader()
