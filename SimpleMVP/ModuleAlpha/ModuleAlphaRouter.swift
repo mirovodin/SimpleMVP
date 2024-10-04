@@ -32,8 +32,7 @@ final class ModuleAlphaRouter: ModuleAlphaRouterProtocol {
     func openModuleBeta(with param: String) {
         
         let context = ModuleBetaFactory.Context(
-            someParam: param,
-            someValue: 100
+            someParam: param
         )
         
         let viewController = factory.make(context: context)

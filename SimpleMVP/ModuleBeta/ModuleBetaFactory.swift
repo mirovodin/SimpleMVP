@@ -12,7 +12,6 @@ final class ModuleBetaFactory {
     // В структуре параметры, которые мы хотим передать в модуль.
     struct Context {
         let someParam: String
-        let someValue: Int
     }
 
     func make(context: Context) -> UIViewController {
