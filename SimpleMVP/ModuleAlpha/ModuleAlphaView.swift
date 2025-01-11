@@ -14,14 +14,14 @@ final class ModuleAlphaView: UIView {
         let buttonText: String
     }
     
-    private lazy var button: UIButton = {
+    private var button: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Tap me please!", for: .normal)
-        button.addTarget(self, action: #selector(onTapped), for: .touchUpInside)
+        button.addTarget(ModuleAlphaView.self, action: #selector(onTapped), for: .touchUpInside)
         return button
     }()
     
-    private lazy var label: UILabel = {
+    private var label: UILabel = {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 25)
         label.text = "Some ... text"

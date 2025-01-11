@@ -12,17 +12,17 @@ final class ModuleBetaView: UIView {
         let text: String
     }
 
-    private lazy var label: UILabel = {
+    private var label: UILabel = {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 25)
         label.text = "Waiting..."
         return label
     }()
     
-    private lazy var button: UIButton = {
+    private var button: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Save", for: .normal)
-        button.addTarget(self, action: #selector(onTapped), for: .touchUpInside)
+        button.addTarget(ModuleBetaView.self, action: #selector(onTapped), for: .touchUpInside)
         return button
     }()
     
@@ -87,8 +87,7 @@ private extension ModuleBetaView {
             button.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -20.0),
         ])
     }
-    
-    
+
     @objc
     func onTapped() {
         presenter.requestSave()
