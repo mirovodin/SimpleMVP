@@ -14,10 +14,10 @@ final class ModuleAlphaView: UIView {
         let buttonText: String
     }
     
-    private var button: UIButton = {
+    private lazy var button: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Tap me please!", for: .normal)
-        button.addTarget(ModuleAlphaView.self, action: #selector(onTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(onTapped), for: .touchUpInside)
         return button
     }()
     

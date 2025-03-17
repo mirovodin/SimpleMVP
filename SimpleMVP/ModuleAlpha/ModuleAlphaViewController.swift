@@ -34,6 +34,7 @@ final class ModuleAlphaViewController: UIViewController {
     }
 
     override func viewDidLoad() {
+        super.viewDidLoad()
         title = presenter.title
         presenter.viewDidLoad()
     }    

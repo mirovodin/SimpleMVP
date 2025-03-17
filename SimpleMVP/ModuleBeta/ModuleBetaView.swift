@@ -19,10 +19,10 @@ final class ModuleBetaView: UIView {
         return label
     }()
     
-    private var button: UIButton = {
+    private lazy var button: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Save", for: .normal)
-        button.addTarget(ModuleBetaView.self, action: #selector(onTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(onTapped), for: .touchUpInside)
         return button
     }()
     
